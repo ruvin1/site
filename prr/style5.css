@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    background-image: url("/C:/Users/dmako/Desktop/ККРИТ/УП 1 курс/prr/img/будик на фон3");
+    background-size: cover;
+    filter: brightness(100%);
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Anonimoys";
+    src: url("fonts/AnonymousPro-Regular.ttf") format("truetype");
+}
+
+header {
+    color: #ffffff;
+    /* font-family: 'Anonymous Pro', monospace; */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.logo {
+    height: 28px;
+    padding-left: 10px;
+    margin-top: -2px;
+}
+
+.korzina {
+    height: 30px;
+    padding-right: 10px;
+    float: right;
+    margin-top: -5px;
+}
+
+.zalupa{
+    height: 25px;
+    padding-right: 10px;
+    float: right;
+    margin-top: -2px;
+
+}
+
+.header-title {
+    color: white;
+    display: flex;
+    margin-left: 850px;
+    /* justify-content: center; */
+    font-size: 15px;
+}
+
+
+.main-nav {
+    display: flex;
+    /* position: absolute; top: 50px; */
+    margin-left: 850px;
+    gap: 10px 25px;
+    font-size: 16px;
+    margin-top: -30px;
+    /* justify-content: center; */
+}
+
+.main-nav a {
+    color: #ffffff;
+    transition: opacity 0.2s;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.main-nav a:hover {
+     opacity: 1;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: auto; */
+    width: 100em;
+}
+
+.text1{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text10{
+   
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.text2{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text20{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text3{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text30{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text4{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text40 {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+footer {
+    background: #232323;
+    color: #fff;
+    padding: 22px 0 14px 0;
+    margin-top: 32px;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 30px;
+    margin-bottom: 14px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-social {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-social img {
+    width: 22px;
+    margin: 0 7px;
+    vertical-align: middle;
+    margin-top: -70px;
+}
+
+.footer-shop {
+    color:#fff;
+    margin-left: 570px;
+}
+
+.footer-shop a {
+    margin-top: 10px;
+    color:#fff;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.footer-shop a:hover {
+    opacity: 1;
+}
+
+
+.footer-copy {
+    text-align: center;
+    color: #bbb;
+    font-size: 12px;
+    margin-top: 10px;
+} 

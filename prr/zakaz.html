@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оформление заказа</title>
+  <link rel="stylesheet" href="slyle7.css" />
+</head>
+<body>
+    <header>
+       <div class="top-panel">
+             <span class="header-title" style="font-family: Anonimoys; padding-top: 10px; margin-top: 0;"> RNDM STORE × VSRAP</span>
+            <hr align="center" width="1900" size="1" color="ddddddd" />
+            <a href="главная.html"><img src="img/лого" alt="vsrap logo" class="logo"></a>
+            <a href=""><img src="img/корзина" alt="vsrap logo" class="korzina"></a>
+            <a href=""><img src="img/лупа дефолт" alt="лупа" class="zalupa"></a>
+        </div>
+            <nav class="main-nav">
+                <span><a href="каталог.html">Каталог</a></span> 
+                <span><a href="акссесуары.html">Аксессуары</a></span>
+            </nav>
+    </header>
+
+    <div class="page-title">Оформление заказа</div>
+
+    <div id="productSection" class="product-card">
+      <div class="product-info">
+        <div class="product-image">
+          <img src="img/szn1.jpg" alt="Футболка SZN" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">Футболка SZN от OG Buda</div>
+          <div class="product-size">Размер: M</div>
+          <div class="quantity-controls">
+            <span>Количество:</span>
+            <button class="quantity-btn" onclick="decreaseQuantity()">−</button>
+            <span class="quantity" id="quantity">1</span>
+            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+          </div>
+        </div>
+        <div class="product-price">
+          <div class="price-label">Итого:</div>
+          <div class="price" id="totalPrice">3 700 ₽</div>
+          <button class="trash-btn" onclick="removeProduct()" title="Удалить товар"> <img src="img/мусорка.jpg"> </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="emptyCart" class="empty-cart" style="display:none;">
+      <div>В корзине пусто</div>
+    </div>
+
+    <div id="formSection" class="form-section">
+      <div class="section-title">Покупатель</div>
+      <div class="form-grid">
+        <div class="form-field half">
+          <input type="text" class="input" placeholder="Ваше ФИО" />
+        </div>
+        <div class="form-field half">
+          <input type="email" class="input" placeholder="Ваш e-mail" />
+        </div>
+        <div class="form-field half">
+          <input type="tel" class="input" placeholder="Номер телефона" />
+        </div>
+        <div class="form-field half promo-field">
+          <input
+            type="text"
+            class="input"
+            placeholder="Промокод"
+            id="promoInput"
+            oninput="checkPromo()"
+          />
+          <div class="promo-check" id="promoCheck">✓</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="deliverySection" class="delivery-section">
+      <div class="section-title">Способ доставки</div>
+      <div class="delivery-options">
+        <div class="delivery-option active" onclick="selectDelivery(this, 'post')">
+          Почта России
+        </div>
+        <div class="delivery-option" onclick="selectDelivery(this, 'cdek')">СДЭК</div>
+      </div>
+      <div class="delivery-fields">
+        <input type="text" class="input" placeholder="Введите город" />
+        <select class="select">
+          <option>Выберите пункт получения</option>
+          <option>Пункт выдачи №1 - ул. Затонская, 2</option>
+          <option>Пункт выдачи №2 - ул. Сурикова 12/6</option>
+          <option>Пункт выдачи №3 - ул. Авиаторов, 68</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="pay-button" onclick="processPayment()">Оформить заказ</button>
+
+  <script>
+    let quantity = 1;
+    const basePrice = 3700;
+    let selectedDelivery = "post";
+
+    function increaseQuantity() {
+      quantity++;
+      updateQuantityDisplay();
+    }
+
+    function decreaseQuantity() {
+      if (quantity > 0) {
+        quantity--;
+        updateQuantityDisplay();
+        if (quantity === 0) {
+          hideProduct();
+        }
+      }
+    }
+
+    function updateQuantityDisplay() {
+      document.getElementById("quantity").textContent = quantity;
+      document.getElementById("totalPrice").textContent =
+        quantity * basePrice + " ₽";
+    }
+
+    function removeProduct() {
+      quantity = 0;
+      hideProduct();
+    }
+
+    function hideProduct() {
+      document.getElementById("productSection").style.display = "none";
+      document.getElementById("emptyCart").style.display = "block";
+      document.getElementById("formSection").style.display = "none";
+      document.getElementById("deliverySection").style.display = "none";
+      document.querySelector(".pay-button").style.display = "none";
+    }
+
+    function checkPromo() {
+      const promoInput = document.getElementById("promoInput");
+      const promoCheck = document.getElementById("promoCheck");
+      if (promoInput.value.trim().length > 0) {
+        promoCheck.classList.add("show");
+      } else {
+        promoCheck.classList.remove("show");
+      }
+    }
+
+    function selectDelivery(element, type) {
+      document.querySelectorAll(".delivery-option").forEach((option) => {
+        option.classList.remove("active");
+      });
+      element.classList.add("active");
+      selectedDelivery = type;
+    }
+
+    function processPayment() {
+      if (quantity === 0) {
+        alert("Корзина пуста!");
+        return;
+      }
+      alert(`Заказ на сумму ${quantity * basePrice} ₽ отправлен в обработку!`);
+    }
+  </script>
+</body>
+
+<footer>
+       <div class="footer-links">
+            <a href="#">Официальные сайты магазинов</a>
+            <a href="о магазе.html">О магазине</a>
+            <a href="каталог.html">Каталог</a>
+            <a href="коллабы.html">Коллаборации</a>
+            <a href="акссесуары.html">Аксессуары</a>
+            <a href="главная.html">Отзывы</a>
+            <a href="#">О доставке</a>
+        </div>
+        <div class="footer-shop">
+            <p><a href="#" target="_blank">VSRAP</a></p>
+            <p><a href="https://rndm.store/?ysclid=mbg56ch6cn625426124" target="_blank">RNDM STORE</a></p>
+        </div>
+        <div class="footer-social">
+            <a href="https://vk.com/id344653043" target="_blank"><img src="img/вк" alt="VK"></a>
+            <a href="https://t.me/RuVin1" target="_blank"><img src="img/тг" alt="TG"></a>
+            <a href="https://e.mail.ru/compose/" target="_blank"><img src="img/почта" alt="TG"></a>        </div>
+        <div class="footer-copy">
+            © RNDM STORE × VSRAP 2025
+        </div>
+    </footer>
+
+</html>

@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Anonimoys";
+    src: url("fonts/AnonymousPro-Regular.ttf") format("truetype");
+}
+
+header {
+    /* font-family: 'Anonymous Pro', monospace; */
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.logo {
+    height: 28px;
+    padding-left: 10px;
+    margin-top: -2px;
+}
+
+.korzina {
+    height: 30px;
+    padding-right: 10px;
+    float: right;
+    margin-top: -5px;
+}
+
+.zalupa{
+    height: 25px;
+    padding-right: 10px;
+    float: right;
+    margin-top: -2px;
+
+}
+
+.header-title {
+    display: flex;
+    margin-left: 850px;
+    /* justify-content: center; */
+    font-size: 15px;
+    color: #222;
+}
+
+
+.main-nav {
+    display: flex;
+    /* position: absolute; top: 50px; */
+    margin-left: 850px;
+    gap: 10px 25px;
+    font-size: 16px;
+    margin-top: -30px;
+    /* justify-content: center; */
+}
+
+.main-nav a {
+    color: #222;
+    transition: opacity 0.2s;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.main-nav a:hover {
+     opacity: 1;
+}
+
+
+.search-bar {
+    position: center;
+    margin: 0 auto 12px auto;
+    max-width: 420px;
+    padding: 0 18px;
+}
+
+.search-bar ::placeholder {
+    padding: 165px;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #f5f5f5;
+}
+
+.lupa {
+    position: absolute; top: 76px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center
+}
+
+.lupa::before{
+    display: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 18px 0 10px 0;
+}
+
+
+footer {
+    background: #232323;
+    color: #fff;
+    padding: 22px 0 14px 0;
+    margin-top: 32px;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 30px;
+    margin-bottom: 14px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-social {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-social img {
+    width: 22px;
+    margin: 0 7px;
+    vertical-align: middle;
+    margin-top: -70px;
+}
+
+.footer-shop {
+    color:#fff;
+    margin-left: 570px;
+}
+
+.footer-shop a {
+    margin-top: 10px;
+    color:#fff;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.footer-shop a:hover {
+    opacity: 1;
+}
+
+
+.footer-copy {
+    text-align: center;
+    color: #bbb;
+    font-size: 12px;
+    margin-top: 10px;
+} 
+
+.logotipi{
+    padding-top: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center
+} 
+
+.catalog-grid {
+  Display: grid;
+  Grid-template-columns: repeat(3, 1fr);
+  Gap: 32px 18px;
+  Margin: 0 3%;
+}
+
+.catalog-item {
+  Background: #ffffff;
+  Border: 1px solid #ececec;
+  Border-radius: 10px;
+  Display: flex;
+  Flex-direction: column;
+  Align-items: center;
+  padding: 30px 10px;
+  
+}
+
+.catalog-item4 {
+  Background: #ffffff;
+  Border: 1px solid #ececec;
+  Border-radius: 10px;
+  Display: flex;
+  Flex-direction: column;
+  Align-items: center;
+  padding: 30px 10px;
+  
+}
+
+.catalog-img {
+  padding-top: 0px;
+  Border-radius: 7px;
+  Margin-bottom: 14px;
+  Background: #ffffff;
+}
+
+.catalog-item img{
+    transition: all 1s ease-out; 
+}
+
+.catalog-item img:hover{
+    transform: scale(1.1); 
+}
+
+.catalog-item4 img{
+    transition: all 1s ease-out; 
+}
+
+.catalog-item4 img:hover{
+    transform: scale(1.1); 
+}
+
+.item-infi {
+  Width: 100%;
+  Text-align: left;
+  margin-top: -10px;
+}
+
+.item-info {
+  Width: 100%;
+  Text-align: left;
+}
+
+.item-infoo {
+  Width: 100%;
+  Text-align: left;
+  margin-top: 23px;
+}
+
+.item-name {
+  margin-left: 30px;
+  Font-size: 14px;
+  Margin-bottom: 6px;
+}
+
+.item-price {
+  margin-left: 30px;
+  Font-size: 15px;
+  Font-weight: bold;
+  Color: #111;
+}
+
+.catalog-controls {
+  Display: flex;
+  Justify-content: flex-start;
+  Gap: 18px;
+  Margin: 24px 3%;
+}

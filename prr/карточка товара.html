@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Футболка SZN от OG Buda</title>
+  <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+  <header>
+       <div class="top-panel">
+           <span class="header-title" style="font-family: Anonimoys; padding-top: 10px; margin-top: 0;"> RNDM STORE × VSRAP</span>
+            <hr align="center" width="1900" size="1" color="ddddddd" />
+            <a href="главная.html"><img src="img/лого" alt="vsrap logo" class="logo"></a>
+            <a href="zakaz.html"><img src="img/корзина" alt="vsrap logo" class="korzina"></a>
+            <a href=""><img src="img/лупа дефолт" alt="лупа" class="zalupa"></a>
+        </div>
+            <nav class="main-nav">
+                <span><a href="каталог.html">Каталог</a></span> 
+                <span><a href="акссесуары.html">Аксессуары</a></span>
+            </nav>
+    </header>
+  <div class="container">
+    <h2>Футболка SZN от OG Buda</h2>
+    <div class="art">Артикул: OGB0101SE</div>
+    <div class="price">3 700 ₽</div>
+    <div class="images">
+      <img src="img/szn1.jpg" alt="Футболка SZN спереди">
+      <img src="img/szn22.jpg"  alt="Футболка SZN сзади" class="szn2">
+    </div>
+    <div class="sizes">
+      <span>Размер:</span>
+      <button class="size-btn" onclick="selectSize(this)">S</button>
+      <button class="size-btn" onclick="selectSize(this)">M</button>
+      <button class="size-btn" onclick="selectSize(this)">L</button>
+      <button class="size-btn" onclick="selectSize(this)">XL</button>
+    </div>
+    <button class="btn-main" onclick="addToCart()">В Корзину</button>
+    <div class="desc">
+      <b>Ткань:</b> 100% хб, 220 г/м²<br>
+      <b>Принт:</b> Шелкография<br>
+      <b>Рекомендации по уходу:</b><br>
+      Стирать наизнанку при 40 градусах;<br>
+      Только естественная сушка.
+    </div>
+    <button class="btn-table" onclick="openModal()">Таблица размеров</button>
+  </div>
+
+  <!-- Модальное окно -->
+  <div class="modal" id="sizeModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <img src="img/размеры футболуи" alt="img/Таблица размеров">
+    </div>
+  </div>
+
+  <script>
+    let selectedSize = null;
+    function selectSize(btn) {
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedSize = btn.textContent;
+    }
+    function addToCart() {
+      if (!selectedSize) {
+        alert('Пожалуйста, выберите размер!');
+        return;
+      }
+      alert('Товар (' + selectedSize + ') добавлен в корзину!');
+    }
+    function openModal() {
+      document.getElementById('sizeModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('sizeModal').style.display = 'none';
+    }
+    // Закрытие модального окна по клику вне содержимого
+    document.getElementById('sizeModal').onclick = function(e) {
+      if (e.target === this) closeModal();
+    }
+  </script>
+
+  <footer>
+      <div class="footer-links">
+        <a href="#">Официальные сайты магазинов</a>
+        <a href="о магазе.html">О магазине</a>
+        <a href="каталог.html">Каталог</a>
+        <a href="коллабы.html">Коллаборации</a>
+        <a href="акссесуары.html">Аксессуары</a>
+        <a href="главная.html">Отзывы</a>
+        <a href="#">О доставке</a>
+      </div>
+      <div class="footer-shop">
+          <p><a href="https://vsrap.shop" target="_blank">VSRAP</a></p>
+          <p><a href="https://rndm.store/?ysclid=mbg56ch6cn625426124" target="_blank">RNDM STORE</a></p>
+      </div>
+      <div class="footer-social">
+          <a href="https://vk.com/id344653043" target="_blank"><img src="img/вк" alt="VK"></a>
+            <a href="https://t.me/RuVin1" target="_blank"><img src="img/тг" alt="TG"></a>
+            <a href="https://e.mail.ru/compose/" target="_blank"><img src="img/почта" alt="TG"></a>
+      </div>
+      <div class="footer-copy">
+          © RNDM STORE × VSRAP 2025
+      </div>
+  </footer>
+
+</body>
+</html>
